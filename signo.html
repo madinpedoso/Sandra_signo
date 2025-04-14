@@ -9,18 +9,61 @@
 </head>
 
 <body>
-    <div class="tudo row">
-        <div class="conteiner text-center container-fluid mt-4 col-lg-4 border rounded-lg rounded-pill p-1 ">
-            <h1 class="text-white">Vamos descobrir o Seu Signo?</h1>
+    <nav class="container row">
+        <div class="col-lg-3 ">.</div>
+        <div class="container-items d-flex justify-content-center align-items-center col-sm-8 mt-5 rounded-pill">
+            <h3 class="titulo fs-3 text-white mt-2 mb-2 text-center ">Vamos descobrir o seu Signo ?</h3>
         </div>
-div.
+    </nav>
+    <div class="datas mt-5">
+        <div class="dia col-12 d-flex justify-content-center mt-5">
+            <h2 class=" fs-5 text-center text-white "> Dia que você nasceu :</h2><br>
+            <input type="text" id="TexDia" class="me-3 ms-3" style="width: 5%;">
+        </div>
 
+        <div class="hora col-12 d-flex justify-content-center mt-2">
+            <h2 class="fs-5 text-center text-white">Mês que você nasceu :</h2>
+            <input type="text" id="TexMes" class="ms-3">
+        </div>
+
+        <div class="hora col-12 d-flex justify-content-center mt-2">
+            <h2 class="fs-5 text-center text-white"> Ano que você nasceu :</h2>
+            <input type="text" id="TexAno" class="ms-3 me-3" style="width: 5%;">
+        </div>
+
+        <div class="botao col-12 d-flex justify-content-center mt-2">
+            <input type="button" value="Exibir" class="btn btn-primary btn-sm ms-3" onclick="Exibir()">
+        </div>
+        <div class="resultados col-12 mt-5 rounded-pill p-4">
+            <div class="semana col-12 d-flex justify-content-center mt-4">
+                <h2 class="fs-5 text-center text-white">Sua idade é :</h2>
+                <input type="text" id="TexSuaIdade" class="ms-3" disabled>
+            </div>
+            <div class="semana col-12 d-flex justify-content-center mt-4">
+                <h2 class="fs-5 text-center text-white">Dia da Semana :</h2>
+                <input type="text" id="TexDiaSemana" class="ms-3" disabled>
+            </div>
+            <div class="semana col-12 d-flex justify-content-center mt-4">
+                <h2 class="fs-5 text-center text-white">Dia da Semana :</h2>
+                <input type="text" id="TexMesExibir" class="ms-3" disabled>
+            </div>
+            <div class="semana col-12 d-flex justify-content-center mt-4">
+                <h2 class="fs-5 text-center text-white">Seu signo é :</h2>
+                <input type="image" id="TexSeuSigno" class="ms-3" disabled>
+            </div>
+
+            <div class="botao col-12 d-flex justify-content-center">
+
+                <input type="button" value="Limpar Registros" class="btn btn-primary btn-sm ms-3" onclick="Limpar()">
+                <input type="button" value="Parar Relogio" class="btn btn-primary btn-sm ms-3 " onclick="Parar()">
+
+            </div>
+        </div>
     </div>
 
-
-
-    <!-- CSS do Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- JavaScript do Bootstrap (opcional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="src/signo.js"></script>
 </body>
 

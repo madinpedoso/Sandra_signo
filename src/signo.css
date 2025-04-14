@@ -1,10 +1,18 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body
+{
+  background: linear-gradient(to right, #011730, #001488);
+}
 
-  .conteiner
-  {
-    background: linear-gradient(to right, #429dff, #482186);
-  }
+.container-items {
+  background: linear-gradient(to right, #00458f, #441392);
+}
+
+.resultados
+{
+  background: linear-gradient(to right, #031a44ce, #72058da8,#cb82fc75);
+}
