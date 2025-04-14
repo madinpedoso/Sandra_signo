@@ -28,11 +28,11 @@ function Exibir() {
 
     // verificação do dia 
     if (isNaN(d_ani)) {
-        window.alert("Infelizmente o dia não ser caracter!  tente novamente ;)");
+        window.alert("Infelizmente o dia não pode ser caracter!  tente novamente ;)");
         location.reload();
     }
     else if (d_ani == "") {
-        window.alert("Infelizmente o dia não pode ficar em branco, preencha com um dia;) ");
+        window.alert("Infelizmente o dia não  pode ficar sem nada , preencha com um dia;) ");
         location.reload();
     }
     else {
@@ -45,7 +45,7 @@ function Exibir() {
 
     //verificaçao do mes
     if (isNaN(m_ani)) {
-        window.alert("Infelizmente o mês não pode ficar sem nada, preencha com um mês ");
+        window.alert("Infelizmente o mês não pode ser caracter!  preencha com um mês ");
         location.reload();
     }
     else if (m_ani == "") {
@@ -59,5 +59,48 @@ function Exibir() {
             location.reload();
         }
     }
+    //verificando se o ano está correto
+    if (isNaN(a_ani)) {
+        window.alert("Infelizmente o ano não pode ser caracter! preencha com um ano ");
+        location.reload();
+    }
+    else if (a_ani == "") {
+        window.alert("Infelizmente o ano não pode ficar sem nada, preencha com um ano ");
+        location.reload();
+    }
+    else if (a_ani.length != 4) {
+        window.alert("Infelizmente o ano tem que ser com 4 caracter, preencha com um ano ");
+        location.reload();
 
+    }
+    else {
+        d_ani = parseInt(d_ani);
+        m_ani = parseInt(m_ani);
+        a_ani = parseInt(a_ani);
+
+
+        var hoje = new Date();
+
+        var d_hoj = hoje.getDate();
+        var m_hoj = hoje.getMonth();
+        var a_hoj = hoje.getFullYear();
+
+        // vamos calcular a idade da pessoa 
+
+        var idade = a_hoj - a_ani;//idade tem o resultado
+
+        if (m_ani > m_hoj) idade = idade - 1;
+
+        else if ((m_ani == m_hoj) && (d_ani > d_hoj)) idade = idade - 1;
+
+        document.getElementById("TexIdade").value = idade;
+        
+    }
 }
+
+
+
+
+
+
+
