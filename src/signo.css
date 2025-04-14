@@ -16,3 +16,9 @@ body
 {
   background: linear-gradient(to right, #031a44ce, #72058da8,#cb82fc75);
 }
+#signo
+{
+  border-radius: 30px;
+   height: 300px; 
+   width: 350px;
+}

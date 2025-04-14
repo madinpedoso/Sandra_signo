@@ -94,11 +94,69 @@ function Exibir() {
         else if ((m_ani == m_hoj) && (d_ani > d_hoj)) idade = idade - 1;
 
         document.getElementById("TexIdade").value = idade;
-        
+
+        hoje.setDate(d_ani);
+        hoje.setMonth(m_ani - 1);
+        hoje.setFullYear(a_ani);
+
+        document.getElementById("TexSemana").value = dia_semana[hoje.getDay()];
+        document.getElementById("TexMesExibir").value = nome_mes[m_ani - 1];
+
+        if (((d_ani >= 20) && (m_ani == 1) || (d_ani <= 18) && (m_ani == 2))) {
+            document.getElementById("signo").src = "src/imagen/imgAquario.jpg";
+        }
+        else if (((d_ani >= 19) && (m_ani == 2) || (d_ani <= 20) && (m_ani == 3))) {
+            document.getElementById("signo").src = "src/imagen/imgPeixe.jpg";
+        }
+        else if (((d_ani >= 21) && (m_ani == 3) || (d_ani <= 19) && (m_ani == 4))) {
+            document.getElementById("signo").src = "src/imagen/imgAries.jpg";
+        }
+        else if (((d_ani >= 20) && (m_ani == 4) || (d_ani <= 20) && (m_ani == 5))) {
+            document.getElementById("signo").src = "src/imagen/imgTouro.jpg";
+        }
+        else if (((d_ani >= 21) && (m_ani == 5) || (d_ani <= 20) && (m_ani == 6))) {
+            //gemeos
+            document.getElementById("signo").src = "src/imagen/imgGemini .jpg";
+        }
+        else if (((d_ani >= 21) && (m_ani == 6) || (d_ani <= 22) && (m_ani == 7))) {
+            //cancer
+            document.getElementById("signo").src = "src/imagen/imgCancer.jpg";
+        }
+        else if (((d_ani >= 23) && (m_ani == 7) || (d_ani <= 22) && (m_ani == 8))) {
+            //leao
+            document.getElementById("signo").src = "src/imagen/imgLeão.jpg";
+        }
+        else if (((d_ani >= 23) && (m_ani == 8) || (d_ani <= 22) && (m_ani == 9))) {
+            //virgem
+            document.getElementById("signo").src = "src/imagen/imgVirgem.jpg";
+        } else if (((d_ani >= 23) && (m_ani == 9) || (d_ani <= 22) && (m_ani == 10))) {
+            //libra   
+            document.getElementById("signo").src = "src/imagen/imgLibra.jpg";
+        } else if (((d_ani >= 23) && (m_ani == 10) || (d_ani <= 21) && (m_ani == 11))) {
+            //escorpiao
+            document.getElementById("signo").src = "src/imagen/imgScorpiao.jpg";
+        } else if (((d_ani >= 22) && (m_ani == 11) || (d_ani <= 21) && (m_ani == 12))) {
+            //sargitario
+            document.getElementById("signo").src = "src/imagen/imgSargitario.jpg";
+        } else {
+            //capricornio
+            document.getElementById("signo").src = "src/imagen/imgCapricornio.jpg";
+        }
     }
 }
 
+function Limpar()
+{
+    
+    document.getElementById("TexDia").value="";
+    document.getElementById("TexMes").value="";
+    document.getElementById("TexAno").value="";
+    document.getElementById("TexIdade").value="";
+    document.getElementById("TexMesExibir").value="";
+    document.getElementById("TexSemana").value="";
+    document.getElementById("signo").src = "src/imagen/imgInicial.jpg";
 
+}
 
 
 
